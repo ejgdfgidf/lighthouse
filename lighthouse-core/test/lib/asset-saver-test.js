@@ -32,9 +32,9 @@ function assertTraceEventsEqual(traceEventsA, traceEventsB) {
 describe('asset-saver helper', () => {
   describe('saves files', function() {
     const tmpDir = `${LH_ROOT}/.tmp/asset-saver-test`;
-    fs.mkdirSync(tmpDir, {recursive: true});
 
     before(() => {
+      fs.mkdirSync(tmpDir, {recursive: true});
       const artifacts = {
         devtoolsLogs: {
           [Audit.DEFAULT_PASS]: [{message: 'first'}, {message: 'second'}],
